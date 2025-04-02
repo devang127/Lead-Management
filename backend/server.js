@@ -14,13 +14,7 @@ const app = express();
 connectDB();
 
 
-app.use(
-    cors({
-      origin: "http://localhost:5173", 
-      methods: "GET, POST, PUT, DELETE",
-      credentials: true,
-    })
-  );
+app.use(cors())
   
 
 app.options("*", cors());
