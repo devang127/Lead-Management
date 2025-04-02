@@ -14,12 +14,7 @@ const app = express();
 connectDB();
 
 
-app.use(cors(
-  {
-    origin: ["https://lead-backend-eight.vercel.app"],
-    credentials: true,
-    }
-  ));
+app.use(cors());
 
 app.options("*", cors());
 
