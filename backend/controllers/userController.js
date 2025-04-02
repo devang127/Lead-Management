@@ -1,6 +1,6 @@
-import User from "../models/user.js";
+import User from "../models/User.js";
 import ActivityLog from "../models/ActivityLog.js";
-import { hash } from "bcryptjs"; 
+import { hash } from "bcryptjs";
 import mongoose from "mongoose";
 export const createUser = async (req, res) => {
   try {
@@ -17,7 +17,7 @@ export const createUser = async (req, res) => {
     const newUser = await User.create({ name, email, password: hashedPassword, role });
 
     await ActivityLog.create({
-      user: req.user.id, 
+      user: req.user.id,
       action: `Created ${role} ${newUser.email}`,
     });
 

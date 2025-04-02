@@ -1,5 +1,5 @@
 
-import User from "../models/user.js";
+import User from "../models/User.js";
 import { hash, compare } from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -20,7 +20,7 @@ export async function login(req, res) {
     }
 
     const token = sign(
-      { id: user._id, role: user.role, isAdminPanelUser }, 
+      { id: user._id, role: user.role, isAdminPanelUser },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
