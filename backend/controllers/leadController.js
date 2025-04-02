@@ -1,5 +1,5 @@
 
-import Lead from "../models/Lead.js";
+import Lead from "../models/lead.js";
 import xlsx from "xlsx";
 import multer from "multer";
 import path from "path";
