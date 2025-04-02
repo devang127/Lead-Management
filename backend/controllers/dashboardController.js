@@ -1,6 +1,6 @@
 
 import Lead from "../models/Lead.js";
-import User from "../models/User.js";
+import User from '../models/User.js';
 
 export const getDashboardStats = async (req, res) => {
   try {
