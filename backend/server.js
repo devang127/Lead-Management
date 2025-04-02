@@ -36,5 +36,9 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/users", verifySuperAdmin, userRoutes);
 app.use("/api/leads", verifySuperAdmin, leadRoutes);
 
+app.get('/', (req, res) => {
+  res.send("API WORKING")
+})
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
