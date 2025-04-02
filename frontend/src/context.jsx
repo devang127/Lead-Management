@@ -1,5 +1,5 @@
 
-const backendUrl = "http://localhost:5001";
+const backendUrl = "https://lead-backend-eight.vercel.app";
 export default backendUrl
 
 import React, { createContext, useState, useEffect } from 'react';
