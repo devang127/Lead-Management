@@ -14,7 +14,7 @@ const app = express();
 connectDB();
 
 
-app.use(cors());
+app.use(cors({ origin: 'https://lead-frontend-taupe.vercel.app' }));
 
 app.options("*", cors());
 
