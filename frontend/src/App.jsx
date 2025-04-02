@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import LeadAdminPanel from "./pages/LeadAdminPanel";
 import UserManagement from "./pages/UserManagement";
@@ -19,7 +18,7 @@ const App = () => {
         {/* Public Routes */}
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          {/* <Route path="/signup" element={<Signup />} /> */}
         </Route>
 
         {/* Protected Routes */}
